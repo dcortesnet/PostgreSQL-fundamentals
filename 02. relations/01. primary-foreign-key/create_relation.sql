@@ -9,9 +9,9 @@ CREATE TABLE books (
     book_id SERIAL PRIMARY KEY,
     title VARCHAR(100),
     publication_year INTEGER,
-    author_id INTEGER REFERENCES authors(author_id)
+    author_id INTEGER,
+    CONSTRAINT fk_author_id FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
-
 
 INSERT INTO authors (first_name, last_name, email) 
 VALUES 

@@ -6,7 +6,8 @@ CREATE TABLE countries (
 CREATE TABLE capitals (
     capital_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    country_id INT UNIQUE REFERENCES countries(country_id)
+    country_id INT UNIQUE,
+    CONSTRAINT fk_country_id FOREIGN KEY (country_id) REFERENCES countries(country_id)
 );
 
 INSERT INTO countries (name)
