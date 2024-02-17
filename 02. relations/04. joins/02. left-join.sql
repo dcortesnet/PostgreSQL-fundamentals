@@ -22,6 +22,6 @@ INSERT INTO gifts (id_user, product, quantity) VALUES
 (2, 'Product Y', 1),
 (1, 'Product Z', 3);
 
-SELECT users.id_user, users.name, users.phone, gifts.id_gift, gifts.product, gifts.quantity
+SELECT *
 FROM users
 LEFT JOIN gifts ON users.id_user = gifts.id_user;

@@ -21,6 +21,6 @@ INSERT INTO interns (name, id_area) VALUES
 ('Peter', 1),
 ('Laura', NULL);
 
-SELECT interns.id_intern, interns.name AS intern_name, areas.name AS area_name
+SELECT *
 FROM interns
 RIGHT JOIN areas ON interns.id_area = areas.id_area;

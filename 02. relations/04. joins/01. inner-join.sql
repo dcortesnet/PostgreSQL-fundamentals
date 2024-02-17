@@ -21,6 +21,6 @@ INSERT INTO sales (product_id, quantity) VALUES
 (2, 1),
 (1, 3);
 
-SELECT sales.sale_id, products.product_id, products.name as name_product, sales.quantity, products.price
+SELECT *
 FROM sales
 INNER JOIN products ON sales.product_id = products.product_id;
